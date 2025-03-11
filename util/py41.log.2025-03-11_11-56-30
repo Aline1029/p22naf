@@ -1,0 +1,2 @@
+DEBUG 2025-03-11 11:56:30,447 [log_handler.py-->line:50]:我是普通信息
+INFO 2025-03-11 11:56:30,448 [log_handler.py-->line:51]:我是debug信息

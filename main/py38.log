@@ -1,0 +1,4 @@
+DEBUG 2025-03-11 13:37:32,079 [operation_header.py-->line:36]:COOKIE
+DEBUG 2025-03-11 13:37:32,080 [operation_header.py-->line:42]:COOKIE
+INFO 2025-03-11 13:37:32,080 [run_test.py-->line:57]:cookies
+DEBUG 2025-03-11 13:37:32,197 [runmethod.py-->line:22]:[DEBUG] 响应头get with head:
