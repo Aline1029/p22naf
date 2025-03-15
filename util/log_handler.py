@@ -46,7 +46,7 @@ def get_logger(name, filename, encoding='utf-8', fmt=None, when='d', interval=1,
 
 
 if __name__ == '__main__':
-    log = get_logger(name='py41', filename='py41.log', debug=True, when='s')
+    log = get_logger(name='py41', filename='../log/py41.log', debug=True, when='s')
     log.debug('我是普通信息')
     log.info('我是debug信息')
     import time

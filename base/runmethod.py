@@ -9,23 +9,23 @@ class RunMethod:
 			res = requests.post(url=url,data=data,headers=header)
 		else:
 			res = requests.post(url=url,data=data)
-			logger.debug("[DEBUG] 响应状态码:", res.status_code)
-			logger.debug("[DEBUG] 响应头:", res.headers)
-			logger.debug("[DEBUG] 原始内容:", res.text[:500])  # 截取前500字符
+			logger.debug("[DEBUG] 响应状态码:"+ str(res.status_code))
+			logger.debug("[DEBUG] 响应头:"+str(res.headers))
+			logger.debug("[DEBUG] 原始内容:"+str(res.text[:500]))  # 截取前500字符
 		return res.json()
 
 	def get_main(self,url,data=None,header=None):
 		res = None
 		if header !=None:	
 			res = requests.get(url=url,data=data,headers=header,verify=False)
-			logger.debug("[DEBUG] 响应状态码get with head:", res.status_code)
-			logger.debug("[DEBUG] 响应头get with head:", res.headers)
-			logger.debug("[DEBUG] 原始内容get with head:", res.text[:500])  # 截取前500字符
+			logger.debug("[DEBUG] 响应状态码get with head:"+str(res.status_code))
+			logger.debug("[DEBUG] 响应头get with head:"+str(res.headers))
+			logger.debug("[DEBUG] 原始内容get with head:"+str(res.text[:500]))  # 截取前500字符
 		else:
 			res = requests.get(url=url,data=data,verify=False)
-			logger.debug("[DEBUG] 响应状态码:", res.status_code)
-			logger.debug("[DEBUG] 响应头:", res.headers)
-			logger.debug("[DEBUG] 原始内容:", res.text[:500])  # 截取前500字符
+			logger.debug("[DEBUG] 响应状态码:"+str(res.status_code))
+			logger.debug("[DEBUG] 响应头:"+str(res.headers))
+			logger.debug("[DEBUG] 原始内容:"+str(res.text[:500]) ) # 截取前500字符
 		return res.json()
 
 	def run_main(self,method,url,data=None,header=None):

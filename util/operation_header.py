@@ -31,15 +31,13 @@ class OperationHeader:
         url = self.get_response_url()
         opjson = OperetionJson()
         response=requests.post(url,opjson.get_data('user'))
-        logger.debug("response",response)
         cookie = response.cookies
-        logger.debug("COOKIE",cookie)
+        logger.debug("COOKIE"+str(cookie))
         return cookie
 
 
     def write_cookie(self):
         cookie = requests.utils.dict_from_cookiejar(self.get_cookie())
-        logger.debug("COOKIE",cookie)
         op_json = OperetionJson()
         op_json.write_data(cookie)
 
